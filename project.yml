@@ -1,0 +1,6 @@
+packages:
+  - name: geoLocator
+    functions:
+      - name: main
+        runtime: python:3.9
+        web: true
