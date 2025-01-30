@@ -1,5 +1,7 @@
 # GeoLocator Function
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Una función serverless que proporciona información de geolocalización basada en direcciones IP. La función detecta automáticamente la IP del visitante y devuelve información detallada sobre su ubicación.
 
 ## Estructura del Proyecto
@@ -146,9 +148,13 @@ print(data)
 
 ## Limitaciones
 
-- La función utiliza el servicio gratuito ipapi.co que tiene límites de uso
-- Algunas IPs pueden no tener información completa
-- Los campos range, metro y area están simplificados
+- La función utiliza el servicio gratuito ipapi.co que tiene los siguientes límites:
+  - 1,000 peticiones por día
+  - Máximo 30 peticiones por minuto
+  - Para más peticiones, se requiere una suscripción en ipapi.co
+- La precisión de la geolocalización depende de la base de datos de ipapi.co
+- Los campos range, metro y area están simplificados y retornan valores por defecto
+- El servicio podría ser más lento en algunas regiones geográficas
 
 ## Solución de Problemas
 
@@ -161,3 +167,31 @@ print(data)
    - Verifica que la estructura de archivos sea correcta
    - Asegúrate de que `project.yml` esté bien configurado
    - Verifica que tengas los permisos necesarios en Digital Ocean 
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - vea el archivo [LICENSE](LICENSE) para más detalles.
+
+```
+MIT License
+
+Copyright (c) 2024 Cairo Resendiz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+``` 
